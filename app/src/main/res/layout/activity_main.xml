@@ -7,38 +7,16 @@
     android:background="@drawable/pic3"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/main_Bt20"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/main_Bt12"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.989"
-        app:layout_constraintStart_toEndOf="@+id/main_Bt11"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <TextView
         android:id="@+id/main_p1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="34dp"
+        android:backgroundTint="#FF5722"
         android:text="Player One"
-        android:textSize="24sp"
+        android:textColor="#FF5722"
+        android:textSize="28dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,26 +28,67 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="35dp"
         android:text="Player Two"
-        android:textSize="24sp"
+        android:textColor="#FF5722"
+        android:textSize="28dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/main_Bt11"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+    <TextView
+        android:id="@+id/main_score_p1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="295dp"
+        android:layout_marginBottom="593dp"
+        android:includeFontPadding="false"
+        android:text="0"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_score_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="299dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="591dp"
+        android:includeFontPadding="false"
+        android:text="0"
+        android:textSize="40dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/main_Bt00"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
+        android:longClickable="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/main_Bt01"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -82,6 +101,7 @@
         android:id="@+id/main_Bt02"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
         android:textColorLink="#772525"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,24 +112,51 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/main_Bt00"
+        android:id="@+id/main_Bt10"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#BAB9B9"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintEnd_toStartOf="@+id/main_Bt11"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/main_Bt22"
+        android:id="@+id/main_Bt11"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/main_Bt12"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#BAB9B9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toEndOf="@+id/main_Bt11"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/main_Bt20"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.718"
@@ -119,6 +166,7 @@
         android:id="@+id/main_Bt21"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:backgroundTint="#BAB9B9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -128,31 +176,35 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/main_Bt10"
+        android:id="@+id/main_Bt22"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="8dp"
+        android:backgroundTint="#BAB9B9"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/main_Bt11"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="16dp"
         android:background="@android:color/darker_gray"
         android:minHeight="?attr/actionBarSize"
         android:textAlignment="center"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_Bt20"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/main_textTurn"
@@ -160,7 +212,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="27dp"
         android:autoText="false"
-        android:text="X turn"
+        android:text="X Start First"
         android:textSize="34sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/toolbar"
@@ -168,43 +220,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/main_score_p2"
-        android:layout_width="19dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="595dp"
-        android:text="0"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/main_score_p1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="312dp"
-        android:layout_marginBottom="595dp"
-        android:includeFontPadding="false"
-        android:text="0"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button25"
         android:layout_width="140dp"
         android:layout_height="55dp"
+        android:backgroundTint="#FF5722"
         android:text="Exit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/main_restart"
@@ -215,6 +235,7 @@
         android:layout_width="140dp"
         android:layout_height="55dp"
         android:layout_marginStart="50dp"
+        android:backgroundTint="#FF5722"
         android:text="Restart"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
