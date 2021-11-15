@@ -2,10 +2,10 @@ package com.example.tictactoe_application_mission_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.dynamicanimation.animation.SpringForce;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity<buttons> extends AppCompatActivity {
@@ -20,6 +20,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
     TextView p1_score;
     Button[][] buttons = new Button[3][3];
     Button restart;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 buttons[i][j] = findViewById(resID);
             }
         }
+
 
         buttons[0][0].setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +109,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
         });
     }
 
+
     private void setRestartScore() {
         p1_score.setText("0");
         p2_score.setText("0");
@@ -120,13 +123,16 @@ public class MainActivity<buttons> extends AppCompatActivity {
         }
     }
 
-
     private void func(Button B, TextView T) {
         if (symbol) {
             B.setText("X");
+//            imageView = new ImageView(this);
+//            imageView.setBackgroundResource(R.drawable.pic2);
             T.setText("O Turn");
         } else {
             B.setText("O");
+            imageView = new ImageView(this);
+            imageView.setBackgroundResource(R.drawable.pic1);
             T.setText("X Turn");
         }
         if (count >= 5) {
