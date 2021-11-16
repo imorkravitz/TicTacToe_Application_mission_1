@@ -71,10 +71,13 @@
 
     <Button
         android:id="@+id/main_Bt00"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@android:color/transparent"
         android:longClickable="false"
+        android:textColor="#000000"
+        android:textSize="75sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,9 +89,12 @@
 
     <Button
         android:id="@+id/main_Bt01"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -99,10 +105,14 @@
 
     <Button
         android:id="@+id/main_Bt02"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
         android:textColorLink="#772525"
+        android:textSize="75sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
@@ -113,10 +123,13 @@
 
     <Button
         android:id="@+id/main_Bt10"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/main_Bt11"
         app:layout_constraintHorizontal_bias="0.054"
@@ -126,9 +139,12 @@
 
     <Button
         android:id="@+id/main_Bt11"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -138,10 +154,14 @@
 
     <Button
         android:id="@+id/main_Bt12"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
+        app:iconTint="@color/cardview_shadow_end_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.989"
@@ -151,9 +171,12 @@
 
     <Button
         android:id="@+id/main_Bt20"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.03"
@@ -164,9 +187,12 @@
 
     <Button
         android:id="@+id/main_Bt21"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -177,9 +203,12 @@
 
     <Button
         android:id="@+id/main_Bt22"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:backgroundTint="#BAB9B9"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:textColor="#000000"
+        android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
@@ -239,5 +268,45 @@
         android:text="Restart"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/main_im1"
+        android:layout_width="416dp"
+        android:layout_height="757dp"
+        android:layout_marginStart="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic6" />
+
+    <ImageView
+        android:id="@+id/main_im2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic6" />
+
+    <ImageView
+        android:id="@+id/main_im3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pic7" />
+
+    <ImageView
+        android:id="@+id/main_im4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
