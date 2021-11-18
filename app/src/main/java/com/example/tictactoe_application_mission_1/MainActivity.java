@@ -140,7 +140,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
         if (count > 3) {
             char result = checkWinner();
             if(result == 'X') {
-                turn.setTextColor(Color.RED);
                 turn.setText("X Is The Winner!");
                 setRestart();
                 count = 0;
@@ -150,7 +149,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
             }
 
             if(result == 'O') {
-                turn.setTextColor(Color.BLUE);
                 turn.setText("O Is The Winner!");
                 setRestart();
                 count = 0;
