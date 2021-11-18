@@ -2,6 +2,7 @@ package com.example.tictactoe_application_mission_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -105,7 +106,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 setRestart();
                 count = 0;
                 symbol = true;
-                turn.setText("X Turn");
+                turn.setText("X You Start!");
                 p1Num = 0;
                 p2Num = 0;
             }
@@ -128,16 +129,19 @@ public class MainActivity<buttons> extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void func(Button B, TextView T) {
         if (symbol) {
+            B.setTextColor(Color.RED);
             B.setText("X");
             T.setText("O Turn");
         } else {
+            B.setTextColor(Color.BLUE);
             B.setText("O");
             T.setText("X Turn");
         }
         if (count > 3) {
             char result = checkWinner();
             if(result == 'X') {
-                turn.setText("X is the Winner!");
+                turn.setTextColor(Color.RED);
+                turn.setText("X Is The Winner!");
                 setRestart();
                 count = 0;
                 p1Num++;
@@ -146,7 +150,8 @@ public class MainActivity<buttons> extends AppCompatActivity {
             }
 
             if(result == 'O') {
-                turn.setText("O is the Winner!");
+                turn.setTextColor(Color.BLUE);
+                turn.setText("O Is The Winner!");
                 setRestart();
                 count = 0;
                 p2Num++;
@@ -166,35 +171,32 @@ public class MainActivity<buttons> extends AppCompatActivity {
 
             //Column
             if (buttons[0][i].getText().toString().equals("X") && buttons[1][i].getText().toString().equals("X") && buttons[2][i].getText().toString() == "X") {
-
                 return 'X';
             }
             if (buttons[0][i].getText().toString().equals("O") && buttons[1][i].getText().toString().equals("O") && buttons[2][i].getText().toString() == "O") {
-
                 return 'O';
             }
             //Row
             if (buttons[i][0].getText().toString().equals("X") && buttons[i][1].getText().toString().equals("X") && buttons[i][2].getText().toString() =="X") {
-                System.out.println("X is the winner!");
+                System.out.println("X Is The Winner!");
                 return 'X';
             }
             if (buttons[i][0].getText().toString().equals("O") && buttons[i][1].getText().toString().equals("O") && buttons[i][2].getText().toString() =="O") {
-                System.out.println("Y is the winner!");
+                System.out.println("Y Is The Winner!");
                 return 'O';
             }
             //Cross
         }
         if ((buttons[0][0].getText().toString().equals("X") && buttons[1][1].getText().toString().equals("X") && buttons[2][2].getText().toString() =="X" )||
                 (buttons[0][2].getText().toString().equals("X") && buttons[1][1].getText().toString().equals("X") && buttons[2][0].getText().toString() =="X")){
-            System.out.println("X is the winner!");
+            System.out.println("X Is The Winner!");
             return 'X';
         }
         if ((buttons[0][0].getText().toString().equals("O") && buttons[1][1].getText().toString().equals("O") && buttons[2][2].getText().toString() =="O" )||
                 (buttons[0][2].getText().toString().equals("O") && buttons[1][1].getText().toString().equals("O") && buttons[2][0].getText().toString() =="O")){
-            System.out.println("X is the winner!");
+            System.out.println("X Is The Winner!");
             return 'O';
         }
-
         return 'N';
     }
 }
