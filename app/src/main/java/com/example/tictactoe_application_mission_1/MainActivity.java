@@ -38,6 +38,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
         p1_score = findViewById(R.id.main_score_p1);
         p2_score = findViewById(R.id.main_score_p2);
         restart = findViewById(R.id.main_restart);
+
         //---------------------------------------//
 
         for (int i = 0; i < 3; i++) {
