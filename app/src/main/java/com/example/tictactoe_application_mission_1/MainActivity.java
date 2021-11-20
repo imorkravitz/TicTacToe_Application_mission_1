@@ -14,7 +14,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity<buttons> extends AppCompatActivity {
 
-    private boolean symbol = true; // x = true, o = false
+    private boolean symbol = true;
     private int count = 0;
     private Integer p1Num =0;
     private Integer p2Num =0;
