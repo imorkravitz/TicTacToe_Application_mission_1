@@ -139,19 +139,21 @@ public class MainActivity<buttons> extends AppCompatActivity {
     }
 
     private void func(Button B, TextView T, TextView icon) {
-        boolean flag = false;
+
         if (symbol&&B.getText()=="") {
             B.setText("X");
             icon.setBackgroundResource(R.drawable.pic2);
             T.setText("O Turn");
-            flag = true;
+            count++;
+            symbol = !symbol;
         } else if(B.getText()=="") {
             B.setText("O");
             icon.setBackgroundResource(R.drawable.pic1);
             T.setText("X Turn");
-            flag = true;
+            count++;
+            symbol = !symbol;
         }
-        if (count > 3 && flag) {
+        if (count > 3) {
             char result = checkWinner();
             if(result == 'X') {
                 turn.setText("X Is The Winner!");
@@ -161,7 +163,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 p1Num++;
                 p1_score.setText(p1Num.toString());
                 p1_score.setTextColor(Color.RED);
-                symbol = false;
+                symbol = true;
             }
 
             if(result == 'O') {
@@ -172,15 +174,11 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 p2Num++;
                 p2_score.setText(p2Num.toString());
                 p2_score.setTextColor(Color.RED);
-                symbol = true;
+                symbol = false;
             }
         }
-        if (count == 8) {
+        if (count == 9) {
             setRestart();
-        }
-        if (flag=true) {
-            count++;
-            symbol = !symbol;
         }
     }
 
