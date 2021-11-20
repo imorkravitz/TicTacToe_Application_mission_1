@@ -143,12 +143,12 @@ public class MainActivity<buttons> extends AppCompatActivity {
         boolean flag = false;
         if (symbol&&B.getText()=="") {
             B.setText("X");
-            icon.setBackgroundResource(R.drawable.pic2);
+            icon.setBackgroundResource(R.drawable.pic8);
             T.setText("O Turn");
             flag = true;
         } else if(B.getText()=="") {
             B.setText("O");
-            icon.setBackgroundResource(R.drawable.pic1);
+            icon.setBackgroundResource(R.drawable.pic7);
             T.setText("X Turn");
             flag = true;
         }
