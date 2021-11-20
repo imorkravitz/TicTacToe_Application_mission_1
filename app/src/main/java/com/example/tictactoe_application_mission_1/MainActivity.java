@@ -3,6 +3,7 @@ package com.example.tictactoe_application_mission_1;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -125,9 +126,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
 
     private void setRestartScore() {
         p1_score.setText("0");
-        p1_score.setTextColor(Color.GRAY);
         p2_score.setText("0");
-        p2_score.setTextColor(Color.GRAY);
     }
 
     private void setRestart() {
@@ -138,6 +137,8 @@ public class MainActivity<buttons> extends AppCompatActivity {
             }
         }
     }
+
+
 
     private void func(Button B, TextView T, TextView icon) {
 
