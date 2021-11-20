@@ -38,6 +38,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
         p1_score = findViewById(R.id.main_score_p1);
         p2_score = findViewById(R.id.main_score_p2);
         restart = findViewById(R.id.main_restart);
+
         //---------------------------------------//
 
         for (int i = 0; i < 3; i++) {
@@ -142,13 +143,13 @@ public class MainActivity<buttons> extends AppCompatActivity {
 
         if (symbol&&B.getText()=="") {
             B.setText("X");
-            icon.setBackgroundResource(R.drawable.pic2);
+            icon.setBackgroundResource(R.drawable.pic8);
             T.setText("O Turn");
             count++;
             symbol = !symbol;
         } else if(B.getText()=="") {
             B.setText("O");
-            icon.setBackgroundResource(R.drawable.pic1);
+            icon.setBackgroundResource(R.drawable.pic7);
             T.setText("X Turn");
             count++;
             symbol = !symbol;
