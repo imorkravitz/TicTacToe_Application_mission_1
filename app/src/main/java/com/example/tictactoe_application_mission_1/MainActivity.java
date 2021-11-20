@@ -14,7 +14,7 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity<buttons> extends AppCompatActivity {
 
-    private boolean symbol = true; // x = true, o = false
+    private boolean symbol = true;
     private int count = 0;
     private Integer p1Num =0;
     private Integer p2Num =0;
@@ -32,7 +32,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //---------------------------------------//
-        //icon = findViewById(R.id.main_icon_22);
         turn = findViewById(R.id.main_textTurn);
         p1 = findViewById(R.id.main_p1);
         p2 = findViewById(R.id.main_p2);
@@ -139,7 +138,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private void func(Button B, TextView T, TextView icon) {
         boolean flag = false;
         if (symbol&&B.getText()=="") {

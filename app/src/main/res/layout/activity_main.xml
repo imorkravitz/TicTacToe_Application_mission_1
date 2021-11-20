@@ -357,16 +357,16 @@
         android:id="@+id/main_textTurn"
         android:layout_width="wrap_content"
         android:layout_height="47dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="130dp"
         android:autoText="false"
-        android:text="X Start First"
 
-        android:textSize="34sp"
+        android:text="X Start First"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/main_restart"
