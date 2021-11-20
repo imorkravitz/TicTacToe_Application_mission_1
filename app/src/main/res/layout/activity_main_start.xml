@@ -26,6 +26,8 @@
         android:layout_marginTop="485dp"
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="198dp"
+        android:backgroundTint="#FF3A52"
+        android:onClick="playBtn"
         android:text="PLAY"
         android:textSize="30sp"
         android:textStyle="bold"

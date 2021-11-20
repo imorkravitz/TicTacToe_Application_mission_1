@@ -2,12 +2,15 @@ package com.example.tictactoe_application_mission_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity<buttons> extends AppCompatActivity {
 
@@ -21,6 +24,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
     TextView p2_score;
     TextView p1_score;
     Button[][] buttons = new Button[3][3];
+    TextView[][] Icons = new TextView[3][3];
     Button restart;
 
     @Override
@@ -28,6 +32,7 @@ public class MainActivity<buttons> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //---------------------------------------//
+        //icon = findViewById(R.id.main_icon_22);
         turn = findViewById(R.id.main_textTurn);
         p1 = findViewById(R.id.main_p1);
         p2 = findViewById(R.id.main_p2);
@@ -39,63 +44,67 @@ public class MainActivity<buttons> extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 String buttonID = "main_Bt" + i + j;
+                String IconsID = "main_icon_" + i + j;
                 int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
                 buttons[i][j] = findViewById(resID);
+
+                resID = getResources().getIdentifier(IconsID,"id",getPackageName());
+                Icons[i][j] = findViewById(resID);
             }
         }
 
         buttons[0][0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[0][0], turn);
+                func(buttons[0][0], turn, Icons[0][0]);
             }
         });
         buttons[0][1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[0][1], turn);
+                func(buttons[0][1], turn, Icons[0][1]);
             }
         });
         buttons[0][2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[0][2], turn);
+                func(buttons[0][2], turn, Icons[0][2]);
             }
         });
         buttons[1][0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[1][0], turn);
+                func(buttons[1][0], turn, Icons[1][0]);
             }
         });
         buttons[1][1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[1][1], turn);
+                func(buttons[1][1], turn, Icons[1][1]);
             }
         });
         buttons[1][2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[1][2], turn);
+                func(buttons[1][2], turn, Icons[1][2]);
             }
         });
         buttons[2][0].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[2][0], turn);
+                func(buttons[2][0], turn, Icons[2][0]);
             }
         });
         buttons[2][1].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[2][1], turn);
+                func(buttons[2][1], turn, Icons[2][1]);
             }
         });
         buttons[2][2].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                func(buttons[2][2], turn);
+                func(buttons[2][2], turn, Icons[2][2]);
             }
         });
 
@@ -125,29 +134,30 @@ public class MainActivity<buttons> extends AppCompatActivity {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j].setText("");
-                buttons[i][j].setBackgroundResource(R.drawable.empty);
+                Icons[i][j].setBackgroundResource(R.drawable.empty);
             }
         }
     }
 
     @SuppressLint("SetTextI18n")
-    private void func(Button B, TextView T) {
-        if (symbol) {
-            B.setTextColor(Color.RED);
+    private void func(Button B, TextView T, TextView icon) {
+        boolean flag = false;
+        if (symbol&&B.getText()=="") {
             B.setText("X");
-            B.setBackgroundResource(R.drawable.pic2);
+            icon.setBackgroundResource(R.drawable.pic2);
             T.setText("O Turn");
-        } else {
-            B.setTextColor(Color.BLUE);
+            flag = true;
+        } else if(B.getText()=="") {
             B.setText("O");
-            B.setBackgroundResource(R.drawable.pic1);
+            icon.setBackgroundResource(R.drawable.pic1);
             T.setText("X Turn");
+            flag = true;
         }
-        if (count > 3) {
+        if (count > 3 && flag) {
             char result = checkWinner();
             if(result == 'X') {
                 turn.setText("X Is The Winner!");
-                Toast.makeText(this,"X is the Winner",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"X turn!",Toast.LENGTH_SHORT).show();
                 setRestart();
                 count = 0;
                 p1Num++;
@@ -158,20 +168,22 @@ public class MainActivity<buttons> extends AppCompatActivity {
 
             if(result == 'O') {
                 turn.setText("O Is The Winner!");
-                Toast.makeText(this,"O is the Winner",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"O Turn!",Toast.LENGTH_SHORT).show();
                 setRestart();
                 count = 0;
                 p2Num++;
                 p2_score.setText(p2Num.toString());
-                p2_score.setTextColor(Color.BLUE);
+                p2_score.setTextColor(Color.RED);
                 symbol = true;
             }
         }
-        if (count == 9) {
+        if (count == 8) {
             setRestart();
         }
-        count++;
-        symbol = !symbol;
+        if (flag=true) {
+            count++;
+            symbol = !symbol;
+        }
     }
 
     private char checkWinner() {
