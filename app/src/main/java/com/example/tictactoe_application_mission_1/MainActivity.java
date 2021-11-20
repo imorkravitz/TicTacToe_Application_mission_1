@@ -32,7 +32,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //---------------------------------------//
-        //icon = findViewById(R.id.main_icon_22);
         turn = findViewById(R.id.main_textTurn);
         p1 = findViewById(R.id.main_p1);
         p2 = findViewById(R.id.main_p2);
