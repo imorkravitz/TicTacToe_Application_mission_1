@@ -138,7 +138,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private void func(Button B, TextView T, TextView icon) {
         boolean flag = false;
         if (symbol&&B.getText()=="") {
