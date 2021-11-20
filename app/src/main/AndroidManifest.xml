@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe_Application_mission_1">
         <activity
+            android:name=".MainStartActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

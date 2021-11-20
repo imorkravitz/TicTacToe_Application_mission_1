@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity<buttons> extends AppCompatActivity {
 
@@ -115,13 +116,16 @@ public class MainActivity<buttons> extends AppCompatActivity {
 
     private void setRestartScore() {
         p1_score.setText("0");
+        p1_score.setTextColor(Color.GRAY);
         p2_score.setText("0");
+        p2_score.setTextColor(Color.GRAY);
     }
 
     private void setRestart() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j].setText("");
+                buttons[i][j].setBackgroundResource(R.drawable.empty);
             }
         }
     }
@@ -131,29 +135,35 @@ public class MainActivity<buttons> extends AppCompatActivity {
         if (symbol) {
             B.setTextColor(Color.RED);
             B.setText("X");
+            B.setBackgroundResource(R.drawable.pic2);
             T.setText("O Turn");
         } else {
             B.setTextColor(Color.BLUE);
             B.setText("O");
+            B.setBackgroundResource(R.drawable.pic1);
             T.setText("X Turn");
         }
         if (count > 3) {
             char result = checkWinner();
             if(result == 'X') {
                 turn.setText("X Is The Winner!");
+                Toast.makeText(this,"X is the Winner",Toast.LENGTH_SHORT).show();
                 setRestart();
                 count = 0;
                 p1Num++;
                 p1_score.setText(p1Num.toString());
+                p1_score.setTextColor(Color.RED);
                 symbol = false;
             }
 
             if(result == 'O') {
                 turn.setText("O Is The Winner!");
+                Toast.makeText(this,"O is the Winner",Toast.LENGTH_SHORT).show();
                 setRestart();
                 count = 0;
                 p2Num++;
                 p2_score.setText(p2Num.toString());
+                p2_score.setTextColor(Color.BLUE);
                 symbol = true;
             }
         }
