@@ -164,7 +164,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 count = 0;
                 p1Num++;
                 p1_score.setText(p1Num.toString());
-                p1_score.setTextColor(Color.RED);
                 symbol = true;
             }
 
@@ -175,7 +174,6 @@ public class MainActivity<buttons> extends AppCompatActivity {
                 count = 0;
                 p2Num++;
                 p2_score.setText(p2Num.toString());
-                p2_score.setTextColor(Color.RED);
                 symbol = false;
             }
         }
